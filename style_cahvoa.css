@@ -1,0 +1,235 @@
+/* Переменные CSS */
+:root {
+    --primary-color: #27ae60;
+    /* Зеленый цвет */
+    --primary-color-darker: #219653;
+    /* Более темный зеленый */
+    --secondary-color: #333;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --light-background-color: #eee;
+    --font-family: "Roboto", sans-serif;
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  /* Общие стили для карточек */
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Общие стили для заголовков */
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--primary-color-darker);
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #ddd;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("images/cahvoa.jpg") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 0;
+  }
+  
+  .about h2 {
+    @extend .section-title;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-image {
+    flex: 1;
+  }
+  
+  .about-image img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-text h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Legends Section */
+  .legends {
+    padding: 50px 0;
+    background-color: var(--light-background-color);
+  }
+  
+  .legends h2 {
+    @extend .section-title;
+  }
+  
+  .legends p {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #777;
+  }
+  
+  /* Tourism Section */
+  .tourism {
+    padding: 50px 0;
+  }
+  
+  .tourism h2 {
+    @extend.section-title;
+  }
+  
+  .tourism h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .tourism ul {
+    list-style: disc;
+    margin-left: 30px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    header .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header nav ul {
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      order: -1;
+    }
+  }
+  
